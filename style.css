@@ -112,3 +112,53 @@ copyright{display:block}
   .site-header{padding:12px}
   .top-nav{display:none}
 }
+
+/* Animaciones y microinteracciones */
+html{scroll-behavior:smooth}
+
+/* reveal - entradas suaves al scrollear */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease;will-change:opacity,transform}
+.reveal.active{opacity:1;transform:none}
+
+/* animación hero */
+@keyframes heroPulse {
+  0%{transform:scale(1);filter:brightness(1)}
+  50%{transform:scale(1.02);filter:brightness(1.04)}
+  100%{transform:scale(1);filter:brightness(1)}
+}
+.hero-content{animation:heroPulse 8s ease-in-out infinite; border-radius:12px}
+
+/* logo flotante */
+@keyframes floatY {
+  0%{transform:translateY(0)}
+  50%{transform:translateY(-6px)}
+  100%{transform:translateY(0)}
+}
+.brand .logo{animation:floatY 4s ease-in-out infinite}
+
+/* tarjetas: elevación al pasar el ratón */
+.card{transition:transform .28s cubic-bezier(.2,.9,.2,1),box-shadow .28s}
+.card:hover, .card:focus-within{transform:translateY(-8px);box-shadow:0 14px 30px rgba(10,30,40,0.12)}
+
+/* botones: interacción y confirmación */
+.btn{transition:transform .18s ease, box-shadow .18s ease, background-color .18s}
+.btn:active{transform:translateY(2px) scale(.995)}
+.btn.primary.confirmed{background:linear-gradient(90deg,#9be15d,#00b09b); color:#023047; box-shadow:0 10px 24px rgba(0,176,155,0.16)}
+
+/* galería: ligera animación hover */
+.gallery img{transition:transform .45s cubic-bezier(.2,.9,.2,1), box-shadow .35s}
+.gallery img:hover{transform:scale(1.04);box-shadow:0 10px 30px rgba(3,59,76,0.12)}
+
+/* header: fondo semitransparente con blur al hacer scroll */
+.site-header{backdrop-filter: blur(6px); background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02)); transition:padding .2s, background .25s}
+.site-header.shrink{padding:8px 20px; box-shadow: 0 6px 22px rgba(3,59,76,0.06)}
+
+/* notificación RSVP (suavizar entrada) */
+.rsvp-note{animation:slideIn 0.45s cubic-bezier(.2,.9,.2,1)}
+@keyframes slideIn{
+  from{opacity:0;transform:translateY(18px) scale(.98)}
+  to{opacity:1;transform:none}
+}
+
+/* accesibilidad: foco visible */
+a:focus, button:focus{outline:3px solid rgba(0,168,204,0.18); outline-offset:3px}
