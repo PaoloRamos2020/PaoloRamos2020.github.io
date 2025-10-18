@@ -1,31 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Fiesta en la Playa - Portafolio</title>
+
+    <!-- Fuente ligera -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>Tu Nombre</h1>
+    <header class="site-header">
+        <div class="brand">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=80&q=60" alt="sol" class="logo">
+            <h1>Fiesta en la Playa</h1>
+        </div>
+        <nav class="top-nav">
+            <a href="#sobre">Sobre</a>
+            <a href="#actividades">Actividades</a>
+            <a href="#galeria">Galería</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
     </header>
+
     <main>
-        <section class="bio">
-            <h2>Sobre mí</h2>
-            <p>Breve descripción sobre ti.</p>
+        <section class="hero" aria-label="Invitación playa">
+            <div class="hero-content">
+                <h2>¡Sol, arena y buena compañía!</h2>
+                <p>Únete a nuestra beach party este fin de semana. Música, juegos y comida al atardecer.</p>
+                <div class="hero-actions">
+                    <button id="rsvpBtn" class="btn primary">Confirmar asistencia</button>
+                    <a class="btn ghost" href="#galeria">Ver fotos</a>
+                </div>
+            </div>
         </section>
-        <section class="projects">
-            <h2>Proyectos</h2>
-            <ul>
-                <li><a href="https://github.com/PaoloRamos2020/ejemplo1" target="_blank">Proyecto 1</a></li>
-                <li><a href="https://github.com/PaoloRamos2020/ejemplo2" target="_blank">Proyecto 2</a></li>
-            </ul>
+
+        <section id="sobre" class="container">
+            <h3>Sobre la fiesta</h3>
+            <p>Una tarde para relajarnos, compartir proyectos y disfrutar del mar. Trae tu toalla, protector solar y ganas de divertirte.</p>
+        </section>
+
+        <section id="actividades" class="container cards">
+            <h3>Actividades</h3>
+            <div class="card-row">
+                <article class="card">
+                    <h4>Volleyball</h4>
+                    <p>Equipos mixtos, premios simbólicos.</p>
+                </article>
+                <article class="card">
+                    <h4>Concurso de castillos</h4>
+                    <p>Creatividad y rapidez: ¡ganador se lleva un premio sorpresa!</p>
+                </article>
+                <article class="card">
+                    <h4>Música en vivo</h4>
+                    <p>DJ local y lista de reproducción veraniega.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="galeria" class="container gallery">
+            <h3>Galería (imagenes libres)</h3>
+            <div class="images">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="playa y atardecer">
+                <img src="https://images.unsplash.com/photo-1507525428034-8f5b8f8a0d1b?auto=format&fit=crop&w=800&q=80" alt="sombrillas en la playa">
+                <img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98?auto=format&fit=crop&w=800&q=80" alt="gente disfrutando la playa">
+            </div>
+            <p class="attribution">Fotos: Unsplash (libres para uso)</p>
         </section>
     </main>
-    <footer>
-        <p>Conéctate conmigo en <a href="https://twitter.com/tuusuario" target="_blank">Twitter</a> o <a href="https://linkedin.com/in/tuusuario" target="_blank">LinkedIn</a>.</p>
+
+    <footer id="contacto">
+        <div class="container footer-grid">
+            <div>
+                <h4>Contacto</h4>
+                <p>Síguenos en <a href="https://twitter.com/tuusuario" target="_blank" rel="noopener">Twitter</a> y <a href="https://linkedin.com/in/tuusuario" target="_blank" rel="noopener">LinkedIn</a>.</p>
+            </div>
+            <div>
+                <h4>Ubicación</h4>
+                <p>Playa local — consulta el punto de encuentro después de confirmar.</p>
+            </div>
+        </div>
+        <p class="copyright">© PaoloRamos2020 - Beach Party</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
